@@ -81,7 +81,7 @@ export default function HowItWorks() {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full" id="howitworks">
       <Timeline data={data} />
     </div>
   );

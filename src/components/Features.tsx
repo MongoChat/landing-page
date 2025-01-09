@@ -49,7 +49,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-12" id="features">
       <div className="max-w-5xl mx-auto px-4">
         <p className="text-xl text-center py-5 text-green-600">Features</p>
         <h2 className="text-center text-4xl font-bold mb-4">

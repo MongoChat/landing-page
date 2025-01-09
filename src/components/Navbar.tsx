@@ -18,28 +18,28 @@ export default function Navbar() {
           </Link>
           <div className="grid gap-2 py-6">
             <Link
-              href="#"
+              href="#home"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
               Home
             </Link>
             <Link
-              href="#"
+              href="#features"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
               Features
             </Link>
             <Link
-              href="#"
+              href="#howitworks"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
               How it works
             </Link>
             <Link
-              href="#"
+              href="#faq"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
@@ -48,33 +48,33 @@ export default function Navbar() {
           </div>
         </SheetContent>
       </Sheet>
-      <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
+      <Link href="#home" className="mr-6 hidden lg:flex" prefetch={false}>
         <span className="text-2xl font-semibold text-green-600">MongoChat</span>
       </Link>
       <nav className="ml-auto hidden lg:flex gap-6">
         <Link
-          href="#"
+          href="#home"
           className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-green-100 hover:text-white-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           prefetch={false}
         >
           Home
         </Link>
         <Link
-          href="#"
+          href="#features"
           className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-green-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           prefetch={false}
         >
           Features
         </Link>
         <Link
-          href="#"
+          href="#howitworks"
           className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-green-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           prefetch={false}
         >
           How it works
         </Link>
         <Link
-          href="#"
+          href="#faq"
           className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-md font-medium transition-colors hover:bg-green-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           prefetch={false}
         >

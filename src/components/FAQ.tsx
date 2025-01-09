@@ -30,7 +30,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16">
+    <section className="py-12 px-4 md:px-8 lg:px-16" id="faq">
       <p className="text-xl text-center py-5 text-green-600">
         Frequently Asked Questions
       </p>
