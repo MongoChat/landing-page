@@ -1,11 +1,9 @@
-import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -27,8 +25,8 @@ export default function HowItWorks() {
               <p className="py-5">Connect Your Database</p>
             </CardTitle>
             <CardDescription>
-              Simply provide your MongoDB connection string, and we'll handle
-              the rest. Your data remains secure and private.
+              Simply provide your MongoDB connection string, and we&apos;ll
+              handle the rest. Your data remains secure and private.
             </CardDescription>
           </CardHeader>
           <CardContent></CardContent>

@@ -1,9 +1,4 @@
-import {
-  FacebookIcon,
-  LinkedinIcon,
-  TwitchIcon,
-  TwitterIcon,
-} from "lucide-react";
+import { FacebookIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {

@@ -22,7 +22,7 @@ interface User {
   email: string;
 }
 
-export default function Waitlist(params: any) {
+export default function Waitlist() {
   const [userData, setUserData] = useState<User>({ name: "", email: "" });
   const [error, setError] = useState("");
   const [isOpen, setIsOpen] = useState(false); // State to control the dialog
@@ -41,8 +41,6 @@ export default function Waitlist(params: any) {
     return emailRegex.test(email);
   };
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async () => {
     if (userData.name === "" || userData.email === "") {
       setError("Fill all the inputs");
@@ -53,7 +51,6 @@ export default function Waitlist(params: any) {
       return;
     }
 
-    setIsSubmitting(true);
     try {
       await addDoc(collection(db, "waitlist"), userData);
       toast({
@@ -64,9 +61,8 @@ export default function Waitlist(params: any) {
 
       setIsOpen(false);
     } catch (err) {
+      console.error("Error adding to waitlist:", err);
       setError("Failed to add to the waitlist. Try again later.");
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
