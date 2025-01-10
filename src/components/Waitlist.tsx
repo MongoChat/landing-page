@@ -11,10 +11,11 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Alert, AlertTitle } from "@/components/ui/alert";
 import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
-import { Alert, AlertTitle } from "@/components/ui/alert";
+import { db } from "../../firebaseConfig";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 
 interface User {
   name: string;
@@ -40,7 +41,9 @@ export default function Waitlist(params: any) {
     return emailRegex.test(email);
   };
 
-  const handleSubmit = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async () => {
     if (userData.name === "" || userData.email === "") {
       setError("Fill all the inputs");
       return;
@@ -50,13 +53,21 @@ export default function Waitlist(params: any) {
       return;
     }
 
-    toast({
-      title: "Awesome! You're on the waitlist 🎉",
-      description:
-        "You will be the first one to use the product when we launch",
-    });
+    setIsSubmitting(true);
+    try {
+      await addDoc(collection(db, "waitlist"), userData);
+      toast({
+        title: "Awesome! You're on the waitlist 🎉",
+        description:
+          "You will be the first one to use the product when we launch",
+      });
 
-    setIsOpen(false); // Close the dialog
+      setIsOpen(false);
+    } catch (err) {
+      setError("Failed to add to the waitlist. Try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
