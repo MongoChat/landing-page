@@ -1,6 +1,10 @@
+// "use client";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Toaster } from "./ui/toaster";
+
+import Waitlist from "./Waitlist";
 
 export default function Navbar() {
   return (
@@ -82,7 +86,8 @@ export default function Navbar() {
         </Link>
       </nav>
       <nav className="ml-auto hidden lg:flex gap-6">
-        <Button>Join Waitlist</Button>
+        <Waitlist />
+        <Toaster />
       </nav>
     </header>
   );
