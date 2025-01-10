@@ -1,10 +1,16 @@
 // "use client";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Toaster } from "./ui/toaster";
 
 import Waitlist from "@/components/Waitlist";
+import { RocketIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -17,7 +23,8 @@ export default function Navbar() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <Link href="#" className="mr-6  sm:flex" prefetch={false}>
+          <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+          <Link href="#" className="mr-6 sm:flex" prefetch={false}>
             <span className="text-2xl text-green-600">MongoChat</span>
           </Link>
           <div className="grid gap-2 py-6">
@@ -49,6 +56,10 @@ export default function Navbar() {
             >
               FAQs
             </Link>
+            <span className="py-2">
+              <Waitlist />
+              <Toaster />
+            </span>
           </div>
         </SheetContent>
       </Sheet>
