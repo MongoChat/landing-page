@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Toaster } from "./ui/toaster";
 
-import Waitlist from "./Waitlist";
+import Waitlist from "@/components/Waitlist";
 
 export default function Navbar() {
   return (

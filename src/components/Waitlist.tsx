@@ -15,7 +15,7 @@ import { Alert, AlertTitle } from "@/components/ui/alert";
 import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { db } from "../../firebaseConfig";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 interface User {
   name: string;
