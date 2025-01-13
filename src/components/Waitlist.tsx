@@ -78,7 +78,9 @@ export default function Waitlist() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button onClick={() => setIsOpen(true)}>Join Waitlist</Button>
+        <button onClick={() => setIsOpen(true)} className="w-full md:w-60 px-8 py-2 text-green-600 backdrop-blur-sm border border-black rounded-md hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] bg-white/[0.2] text-md transition duration-200 flex flex-row justify-center items-center">
+          Join Waitlist
+        </button>
       </DialogTrigger>
 
       <DialogContent className="sm:max-w-[425px]">

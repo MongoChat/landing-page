@@ -7,9 +7,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Toaster } from "./ui/toaster";
-
-import Waitlist from "@/components/Waitlist";
+import { RocketIcon } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -55,10 +53,6 @@ export default function Navbar() {
             >
               FAQs
             </Link>
-            <span className="py-2">
-              <Waitlist />
-              <Toaster />
-            </span>
           </div>
         </SheetContent>
       </Sheet>
@@ -96,8 +90,9 @@ export default function Navbar() {
         </Link>
       </nav>
       <nav className="ml-auto hidden lg:flex gap-6">
-        <Waitlist />
-        <Toaster />
+        <Button>
+          Launching Soon <RocketIcon className="ml-2" />
+        </Button>
       </nav>
     </header>
   );
