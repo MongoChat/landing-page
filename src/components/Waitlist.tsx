@@ -22,8 +22,13 @@ interface User {
   email: string;
 }
 
+const initialState = {
+  name : "",
+  email: ""
+}
+
 export default function Waitlist() {
-  const [userData, setUserData] = useState<User>({ name: "", email: "" });
+  const [userData, setUserData] = useState<User>(initialState);
   const [error, setError] = useState("");
   const [isOpen, setIsOpen] = useState(false); // State to control the dialog
   const { toast } = useToast();
@@ -60,6 +65,7 @@ export default function Waitlist() {
       });
 
       setIsOpen(false);
+      setUserData(initialState);
     } catch (err) {
       console.error("Error adding to waitlist:", err);
       setError("Failed to add to the waitlist. Try again later.");
