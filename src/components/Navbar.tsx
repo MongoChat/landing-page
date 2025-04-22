@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Toaster } from "./ui/toaster";
 
-import Waitlist from "@/components/Waitlist";
+// import Waitlist from "@/components/Waitlist";
 
 export default function Navbar() {
   return (
@@ -56,7 +56,7 @@ export default function Navbar() {
               FAQs
             </Link>
             <span className="py-2">
-              <Waitlist />
+              {/* <Waitlist /> */}
               <Toaster />
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
         </Link>
       </nav>
       <nav className="ml-auto hidden lg:flex gap-6">
-        <Waitlist />
+        {/* <Waitlist /> */}
         <Toaster />
       </nav>
     </header>

@@ -1,3 +1,4 @@
+"use client";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { RocketIcon } from "lucide-react";
 import coverImg from "../../public/cover.png";
@@ -20,8 +21,13 @@ export default function Cover() {
           No complex queries, just chat naturally and get the data you need.
         </p>
         <div className="flex space-y-4 md:space-y-0 flex-col items-center">
-          <button className="w-full md:w-60 px-4 py-3 text-green-600 font-semibold backdrop-blur-sm border border-black rounded-md hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] bg-white/[0.2] text-md transition duration-200 flex flex-row justify-center items-center">
-            Launching Soon <RocketIcon className="ml-2" />
+          <button
+            onClick={() =>
+              window.open("https://mongochatapp.subhamsingh.tech", "_blank")
+            }
+            className="w-full md:w-60 px-4 py-3 text-green-600 font-semibold backdrop-blur-sm border border-black rounded-md hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] bg-white/[0.2] text-md transition duration-200 flex flex-row justify-center items-center"
+          >
+            Try now <RocketIcon className="ml-2" />
           </button>
         </div>
       </div>
