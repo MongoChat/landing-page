@@ -1,8 +1,8 @@
 "use client";
 import { Highlight } from "@/components/ui/hero-highlight";
-import { RocketIcon } from "lucide-react";
 import coverImg from "../../public/cover.png";
 import Image from "next/image";
+import { RocketIcon } from "lucide-react";
 
 export default function Cover() {
   return (
